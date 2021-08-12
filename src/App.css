@@ -1,0 +1,118 @@
+/* RESETS
+=========================================== */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 20px 0;
+  padding: 0 20px;
+  line-height: 1;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #202020;
+  background-color: #fbfbfb;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RICK AND MORTY APPLICATION
+=========================================== */
+.container {
+  display: flex;
+  max-width: 550px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container p {
+  margin: 0;
+}
+
+.container .character-card {
+  width: 49%;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.container .character__name {
+  background-color: #ecd018;
+  text-align: center;
+  padding: 10px;
+}
+
+.container .character__name p {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.container .character__image {
+  padding-bottom: 20px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.container .character__meta {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .character__meta p {
+  width: 45%;
+  background-color: #f16820;
+  border-radius: 3px;
+  padding: 7px;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: 15px;
+}
+
+@media (max-width: 800px) {
+  .container .character-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .character__meta {
+    flex-wrap: wrap;
+  }
+
+  .container .character__meta p,
+  .container .character-card {
+    width: 100%;
+  }
+
+  .container .character__meta p {
+    margin-bottom: 10px;
+  }
+}
